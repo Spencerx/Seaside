@@ -10,7 +10,7 @@ To use this library
 <html>
   <head>
     <!-- -->
-    <script src="seaside-components.js" defer></script>
+    <script src="seaside-web-components.js" defer></script>
   </head>
   <body>
     <!-- -->

@@ -47,14 +47,21 @@ seasideWebComponentsJs
        }));
     }
 
+    #setContent(htmlString) {
+       const range = document.createRange();
+       // Range.createContextualFragment unlike assigning innerHtml executes scripts
+       const documentFragment = range.createContextualFragment(htmlString);
+       this.#shadowRoot.replaceChildren(documentFragment);
+    }
+
     #load(method, url, data) {
       const xhr = new XMLHttpRequest();
 
-      xhr.responseType = "text";  // we do not strip anyhing, just use innerHtml
+      xhr.responseType = "text";  // the response is neither valid HTML nor XML
       xhr.onload = (event) => {
         const status = xhr.status;
         if (status === 200) {
-          this.#shadowRoot.innerHTML = xhr.response;
+          this.#setContent(xhr.response);
         } else if (status >= 400 && status <= 599) {
           this.#publishXhrEvent("status", event);
         }
