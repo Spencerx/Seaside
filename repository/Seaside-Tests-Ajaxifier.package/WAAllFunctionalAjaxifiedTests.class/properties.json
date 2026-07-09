@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "2026-07-09T09:51:26.401542+03:00",
+	"super" : "WAAllFunctionalTests",
+	"category" : "Seaside-Tests-Ajaxifier",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WAAllFunctionalAjaxifiedTests",
+	"type" : "normal"
+}

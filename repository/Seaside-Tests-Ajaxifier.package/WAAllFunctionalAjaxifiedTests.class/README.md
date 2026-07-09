@@ -1,0 +1,1 @@
+I am  and ajaxified version of WAAllFunctionalTests registered at /tests/functional-ajaxified.

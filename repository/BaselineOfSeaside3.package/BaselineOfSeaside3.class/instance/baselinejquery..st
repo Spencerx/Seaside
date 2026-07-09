@@ -7,7 +7,7 @@ baselinejquery: spec
 			package: 'JQuery-Core' with: [
 				spec requires: #('Javascript-Core' ) ];
 			package: 'JQuery-Tests-Core' with: [
-				spec requires: #('JQuery-Core' 'Javascript-Tests-Core' 'Seaside-Development' 'Seaside-Tests-Functional' 'Seaside-Ajaxifier-Core') ];
+				spec requires: #('JQuery-Core' 'Javascript-Tests-Core' 'Seaside-Development' 'Seaside-Tests-Functional') ];
 			package: 'JQuery-Examples' with: [ 
 				spec requires: #('JQuery-Core' 'Seaside-Component' 'Seaside-Examples') ];
 			package: 'JQuery-JSON' with: [

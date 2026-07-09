@@ -9,12 +9,15 @@ baselinejavascript: spec
 			package: 'Javascript-Tests-Core' with: [
 				spec requires: #('Javascript-Core' 'Seaside-Tests-Core' ) ];
 			package: 'Seaside-Ajaxifier-Core' with: [
-				spec requires: #('Seaside-Core') ].
+				spec requires: #('Seaside-Core') ];
+			package: 'Seaside-Tests-Ajaxifier' with: [
+				spec requires: #('Seaside-Ajaxifier-Core' 'Seaside-Tests-Functional') ].
 		spec 
 			group: 'Javascript' with: #('Javascript-Core');
 			group: 'Javascript Tests' with: #('Javascript-Tests-Core' );
-			group: 'Tests' with: #( 'Javascript Tests' );
-			group: 'Ajaxifier' with: #( 'Seaside-Ajaxifier-Core' ) ].
+			group: 'Ajaxifier' with: #( 'Seaside-Ajaxifier-Core' );
+			group: 'Ajaxifier Tests' with: #( 'Seaside-Tests-Ajaxifier' );
+			group: 'Tests' with: #( 'Javascript Tests' 'Ajaxifier Tests' ) ].
 		
 	spec for: #squeak do: [
 		spec 
